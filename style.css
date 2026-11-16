@@ -1,0 +1,61 @@
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: hsl(0, 2%, 8%);
+}
+
+.img-container{
+    width: 250px;
+    height: 250px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateY('0deg');
+    transition: transform .7s;
+}
+.img-container span{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    transform:  rotateY(calc(var(--i)*45deg)) translateZ(400px);
+}
+
+.img-container span img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.btn-container{
+    position: relative;
+    width: 80%;
+}
+.Btn{
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 50px;
+    padding: 10px;
+    border: none;
+    border-radius: 10%;
+    background-color: hsl(0, 36%, 90%);
+    color: hsl(0, 0%, 2%);
+    cursor: pointer;
+}
+.Btn:hover{
+      background-color: hsl(0, 36%, 80%);
+}
+
+#Prev{
+    left: 20%;
+}
+
+#Next{
+    right: 20%;
+}
